@@ -1,0 +1,167 @@
+<%- include('./partials/head'); %>
+
+<body class="body-display">
+
+ <%- include('./partials/navbar'); %><br>
+
+<h1 class="staycation-title">Staycation Blog</h1>
+  
+ <div class="jumbotron bg-transparent div-intro " ><img class="logo" src="/public/img/logo.png" alt="">
+
+ </div>
+ <div class="jumbotron bg-transparent ">
+
+
+<a class="publish" href="/add"><h3 class="publish">Click here to publish YOUR story</h3></a>
+
+</div>
+<main class="main-display">  
+ 
+<br><br><br><br>
+ <div class="jumbotron cont text-center text-white">
+  <h1 class="staycation-p">Latest Blog Post:</h1>
+
+  <% if(items.length >0)  {%>
+  <h1 class="latest-title"><%= items[items.length - 1].title %></h1>
+ <br> <br> <br>
+      
+ <div class="container">
+    <img class="latest-img "  src="<%= items[items.length - 1].url  %> " alt="">
+    </div>
+     
+     <div class="container container-fluid">
+        <br><br>
+  <p class="p-latest-desc">
+      <%= items[items.length - 1].description  %>
+  </p><br><br>
+  <br></div>
+  <div class="row">
+  <div class="col-6"> <label class="label-latest" for="author">AUTHOR:</label><br>
+   <p class="p-latest"> <%= items[items.length - 1].author %> </div>
+     <div class="col-6">
+     <label class="label-latest" for="location">LOCATION:</label><br>
+     <p class="p-latest"> <%= items[items.length - 1].location %>
+</p>
+</div>
+</div> <br><br>
+<div class="row">
+<div class="col-6">
+   <p class="label-latest">From: </p> <br>
+   <p class="p-latest"> <%= items[items.length - 1].dateStart %>
+   </div> <div class="col-6">
+      <p class="label-latest">To: </p> <br>
+      <p class="p-latest"> <%= items[items.length - 1].dateEnd %> </div>
+      </div></div>
+
+  <% } else{ %>  
+ <% }%>
+     
+     </div>
+
+ </div>
+
+
+    </div>
+
+</div>
+<br> <br> <br>
+<h1 class="staycation-p">Blog Posts:</h1>
+    <div class="row top-b justify-content-center">
+ <% for(var i =0; i < items.length; i++){ %> 
+
+<div class="col-lg-3 col-md-4">
+ <div class="card" style="width: 19rem; margin: 10px 0px;">
+ <img class="card-img-top" src="<%= items[i].url %>" alt="Card image cap">
+     <div class="card-body">
+ <h5 class="card-title"><%=items[i].title %></h5>
+<p class="card-text"><%= items[i].author%></p>
+<p class="card-text"><%= items[i].dateStart%></p>
+<p class="card-text"><%= items[i].location%></p>
+<p class="card-text"><%= items[i].tags%>...</p>
+<div class="row">
+   <div class="col-4">
+<form action="/delete" method="post">
+<input type="text" value="<%= items[i].key %> " name="selected" style="visibility: hidden;" id="">
+    <button type="submit" class="btn btn-sm trash ">
+<i class="fas fa-2x fa-trash text-danger"></i></button>
+</form>
+   </div>     
+   <div class="col-4">
+<a class="i-action" href="/view/<%=items[i].key%> "> <i class="fas fa-eye fa-2x text-primary"></i></a>   
+    
+   </div>
+   <div class="col-4">
+<a class="i-action" href="/edit/<%=items[i].key%> "> <i class="fas fa-pencil-alt fa-2x"></i>
+</a>   
+      
+     
+   </div>
+</div>
+     </div>
+  
+ </div>
+    </div>
+  
+   
+    
+      <%}%>
+      
+    </div>
+ <div class="jumbotron jumbotron-fluid bg-transparent">
+      <div class=" top-b row justify-content-center">
+   <div class="col-auto mb-3">
+   <div class="card" style="width: 18rem;">
+<img class="card-img-top" src="https://images.unsplash.com/photo-1584291507637-b497c99902cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80" alt="Card image cap">
+<div class="card-body">
+   <h5 class="card-title">A Staycation in Catania </h5>
+  <p class="card-text">Giovanni Giuffrida</p>
+  <p class="card-text">2019-11-23T14:26</p>
+  <p class="card-text">Catania, Italy</p>
+  <p class="card-text"> Not only Mount Etna...</p>
+  
+  <a href="#" class="btn btn-primary bt-dis">Read</a>
+</div>
+     </div>
+   </div>
+      
+
+   <div class="row justify-content-center">
+     <div class="col-auto mb-3">
+     <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://images.pexels.com/photos/2333081/pexels-photo-2333081.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+  <div class="card-body">
+      <h5 class="card-title">Staycation in Edinburgh </h5>
+    <p class="card-text">John Doe</p>
+    <p class="card-text">2020-09-23T14:26</p>
+    <p class="card-text">Edinburgh, UK</p>
+    <p class="card-text"> A Picturesque...</p>
+    <a  href="#" class="btn btn-primary bt-dis">Read</a>
+  </div>
+</div>
+     </div>
+  
+
+     <div class="row justify-content-center">
+<div class="col-auto mb-3">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://images.pexels.com/photos/2804038/pexels-photo-2804038.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+    <div class="card-body">
+ <h5 class="card-title">My Staycation in Singapore </h5>
+      <p class="card-text">John Smith</p>
+      <p class="card-text">2020-03-23T12:26</p>
+      <p class="card-text">Singapore, Malaysia</p>
+      <p class="card-text"> Stunning!! During the...</p>
+      <a  href="#" class="btn btn-primary bt-dis">Read</a>
+    </div>
+  </div>
+</div>
+     </div>
+
+</div></div></div>
+    </div>
+<footer>
+  <%- include('./partials/footer'); %>
+     </footer>
+     
+     </body>
+     </html>

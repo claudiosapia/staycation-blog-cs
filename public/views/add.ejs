@@ -1,0 +1,47 @@
+<%- include('./partials/head'); %>
+<body class="body" >
+    <%- include('./partials/navbar'); %>
+
+
+    <div class="jumbotron main-write text-center mx-auto">
+        
+        <h1 class="staycation-title"> Tell us your story </h1>
+           <img class="logo" src="/public/img/logo.png" alt="">
+           <br>
+        <div class="jumbotron cont" >
+        <form action="/add" method="POST">
+        <input  maxlength="25" type="text" class="form-control" name="title" id="" placeholder="Enter Title (max 25 characters)" required>
+        <br>
+        <input type="text" class="form-control" name="author" placeholder="Enter Author Name" id="" required>
+        <br>
+        <textarea placeholder="Enter Description" name="description" class="form-control" id="" cols="30" rows="15" required></textarea>
+        <br>
+        <input type="text" placeholder="Enter Staycation Location" name="location" class="form-control" id=""required>
+        <br><br><label for="img">Upload Your Images or add URL:</label>
+        <input type="text" placeholder="Enter Image URL" name="url"  class="form-control" id="" >
+        <br>
+        <input class="form-control-file" type="file" id="files" name="files" >
+        <br><br>
+        <label for="img">Staycation Start Date:</label>
+        <input type="date" class="form-control" name="dateStart" id="" required> 
+        <label for="img">Staycation End Date:</label>
+        <input type="date" class="form-control" name="dateEnd" id=""> 
+        <br>
+        <input type="text" name="tags" class="form-control" id="" placeholder="Enter tags (put ,)">
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg">Post</button>
+        </form>
+    </div>
+     
+
+
+    </div>
+
+</div>
+
+
+<footer>
+    <%- include('./partials/footer'); %>
+</footer>
+</body>
+</html>

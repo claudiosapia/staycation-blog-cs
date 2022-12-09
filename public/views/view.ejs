@@ -1,0 +1,43 @@
+<%- include('./partials/head'); %>
+
+<body>
+
+    <%- include('./partials/navbar'); %><br>
+
+    <div class="jumbotron bg-transparent text-center items ">
+ 
+        <p class="author">Author: <%=items.author %></p>
+        
+ <h1 class="title"><%= items.title %></h1>
+ <br><br>   
+ 
+  <p class="description"> <%= items.description  %></p>
+  <br><br>
+  <h5> Staycation Duration:</h5> <br>
+  <p>From:</p>
+  <p><%=items.dateStart%></p>
+  <p>To:</p>
+  <p><%=items.dateEnd%></p>
+  <h1 class="title">Staycation Pictures</h1> <br>
+  <img class= "blog-img" src="<%=items.url%>" alt="">
+   
+    
+  <img class= "blog-img" src="<%=items.files%>" alt="img">
+    
+    
+     </div>
+         <% for(i=0; i=items.length; i++){ %>
+    <img src="<%=items[i].files %>" alt="">
+    <% }%>
+    
+
+
+
+
+
+<footer>
+    <%- include('./partials/footer'); %>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<%- include('./partials/head'); %>
+<body  >
+ <%- include('./partials/navbar'); %>
+
+
+    <div class="jumbotron  main-write text-center mx-auto">
+        <h1 class="staycation-title">Edit Your Post</h1>
+      
+        <img class="logo" src="/public/img/logo.png" alt="">
+
+ <div class="jumbotron  cont" >
+    <form action="/edit" method="post">
+      
+      <label for="title">Title</label>
+      <input maxlength="80"  type="" name="title" class="form-control" id="" value="<%= data.title%> "><br>
+      <label for="author">Author</label>
+<input maxlength="80"  type="" name="author" class="form-control" id="" value="<%= data.author%> "><br>
+<label for="description">Description</label>
+<textarea name="description" id="" class="form-control" cols="30" rows="14" ><%= data.description  %></textarea>
+       <br>
+       <label for="location">Location</label>
+ <input maxlength="25"  type="" name="location" class="form-control" id="" value="<%= data.location  %> "><br><label for="location">Image link URL </label>
+  <input type="text" name="url" id="" class="form-control" value="<%= data.url  %> ">
+    <br>  
+
+     <label for="tags">Tags</label>
+ <input type="text" name="tags" class="form-control" id="" value="<%= data.tags  %> ">
+    <br>
+     <label for="start">Staycation Start Date:</label>
+ <input type="date" class="form-control" name="dateStart" id="" required  value="<%= data.dateStart  %> ">
+  
+     <label for="end">Staycation End Date:</label>
+<input type="date" class="form-control" name="dateEnd" id=""  value="<%= data.dateEnd  %> "> 
+      <br>
+      
+      <label for="location">Image Upload </label>
+  <input class="form-control-file" type="file" id="files" name="files"   value="<%= data.files  %>"> 
+      <br><br>
+      <input type="text" name="key" style="visibility: hidden;" class="form-control" id="" value="<%=data.key%> ">
+     
+  <button type="submit" class="btn btn-lg btn-primary">Update</button>
+       </form>
+ </div>
+</div>
+<footer>
+   <%- include('./partials/footer'); %>
+</footer>
+</body>
+</html>

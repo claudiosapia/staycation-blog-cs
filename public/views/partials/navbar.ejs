@@ -1,0 +1,34 @@
+<nav>
+    
+    <div class="hamburger">
+    <div class="hline"></div>
+   <div class="hline"></div>
+   <div class="hline"></div>
+      </div>
+      <div class="nav-links container justify-content-center">
+    <a class="navbar-brand " href="#">
+      <img class="brand" src="/public/img/logo.png" width="130" height="130" class="d-inline-block align-left" alt="">
+    </a>
+    <li class="nav-link active"> <a class="nav-link link1" href="/">Home</a>
+    </li>
+    <li class="nav-link"><a class="nav-link link3" href="/contact">Contact Us</a></li>
+    <li class="nav-link">  <a class="nav-link link2" href="/add">Write Your Story</a></li>
+</div>
+
+  </nav>
+
+<script>$( document ).ready(function() {
+
+const hamburger = $(".hamburger");
+const navLinks = $(".nav-links");
+const links = $(".nav-links li");
+
+hamburger.on("click", (e) => {
+  navLinks.toggleClass("open");
+
+  });
+
+  });
+ 
+
+</script>

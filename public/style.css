@@ -1,0 +1,509 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav{
+    width: 100%;
+    background: #D38312;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ height: 20vh;
+    border-bottom: 2px solid rgb(131, 115, 144);
+}
+
+.brand{
+   margin-left: 1em;
+   left: 0px;
+   position: absolute;
+}
+
+
+
+.brand:hover{
+  opacity: 0.8;
+}
+
+
+.nav-links{
+    list-style-type: none;
+    
+}
+
+
+.link1{
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    position: absolute;
+    top: 2em;
+    left:13em;
+    margin: auto;
+    padding: 0;
+    font-weight: 700;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 1px #ff8800c5;
+   
+}
+
+
+.link2{
+    position: absolute;
+    top: 1.1em;
+    left:35em;
+    color: white;
+    font-size: 1.5em;    padding: 0;
+    font-weight: 700;
+    font-family: 'Lobster', cursive;
+      text-shadow: 3px 2px #8d0d7ce0;
+   
+}
+
+
+.link3{
+    position: absolute;
+    top: 1.1em;
+    left:24em;
+    color: white;
+    font-size: 1.5em;
+        padding: 0;
+    font-weight: 700;
+    font-family: 'Lobster', cursive;
+      text-shadow: 3px 2px #8d0d7ce0;
+   
+}
+
+.link1:hover{
+    font-weight: 900;
+    text-shadow: 6px 2px #8d0d0de0;
+    color: #ffdd00;
+}
+
+.link2:hover{
+    font-weight: 800;
+    text-shadow: -5px -2px #a7179f;
+    color: #ffdd00;
+}
+@media screen and (max-width: 768px) {
+    .hline {
+      width: 2em;
+      height: 0.2em;
+      background: white;
+      margin: 0.3em;
+    }
+    nav {
+      position: relative;
+    }
+  
+
+
+    .hamburger {
+        color: white;
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+      
+    }
+
+    .nav-links li{
+        margin: 2px;
+        display: flex;
+        margin-left: -50px;
+        justify-content: center;
+        text-align: center;
+        justify-items: center;
+        
+    }
+  
+    .nav-links {
+        justify-content: space-between;
+        margin-top: 0;
+      
+      background: #D38312;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      height: 80vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: ellipse(0px 100px at 10% 2%);
+      clip-path: ellipse(0px 100px at 10% 2%); 
+               transition: all 0.4s ease-in;
+      pointer-events: none;
+      list-style-type: none;
+      z-index: 1;
+    }
+
+
+    .nav-links.open {
+        clip-path: ellipse(100% 100% at 1% 1%);
+      -webkit-clip-path:  ellipse(100% 100% at 1% 1%);;
+      pointer-events: all;
+     
+    }
+
+    .brand{
+        margin: 2px;
+        display: flex;
+        margin-left: auto;
+        left: auto;
+        justify-content: center;
+        text-align: center;
+        justify-items: center;
+    
+    }
+    .link1{ 
+        display: inline-block;
+        list-style: none;
+        position: sticky;
+        font-size: 140%;
+        margin: auto;
+        margin-top: 8em;
+        left: auto;
+       }
+    
+    .link2{
+        display: inline-block;
+    position: sticky;
+        list-style: none;
+        margin: auto;
+        font-size: 140%;
+     left: auto;
+        
+    }
+
+    .link3{
+        display: inline-block;
+    position: sticky;
+        list-style: none;
+        margin: auto;
+        font-size: 140%;
+     left: auto;
+        
+    }
+    .logo-ft{
+        position: relative;
+        margin-top: 0;
+       min-width: 100%;
+       min-height: 100%;
+    }
+
+
+
+
+}
+
+
+
+.write-tellus{
+    margin-top: 1em;
+    font-family: 'Lobster', cursive;
+    font-size: 5em;
+    color:#ffdd00c5; 
+    text-shadow: 2.5px 5px #8d0d7ce0;}
+
+.img-d{
+    margin-top: 2em;
+    
+}
+
+
+.cont{
+    margin: 4em 5% 0 5%;
+    max-width: 90%;
+    max-height: 80%;
+    height: auto;
+     background:#000000;
+     background-repeat: space;
+     background-size: 60% 50%;
+     background-repeat:space;
+     background-image: url(./img/logo2xtratransparent.png);
+    color: white;
+     border-radius: 2%;
+     border: solid 8px;
+     border-color: #ff0c9a62;
+     font-family: 'Merriweather', serif;
+
+     font-size: 1.3em;
+     font-weight: 500;
+}
+
+.form-control{
+    font-size: 1em;
+    font-weight: 500;
+    
+}
+
+.main-write{
+    background: url('/public/img/adam-birkett-75EFpyXu3Wg-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+   background-color:#F8F8FF	;
+}
+
+.bg-write{
+  border-radius: 60%;
+   width: 100%;
+   height: 100%;
+  border: solid #ffdd00a8 2px;
+}
+
+.bg-end-write{
+    background-color: rgb(209, 103, 32);
+}
+
+
+.title{
+    margin-top: 1em;
+    font-family: 'Lobster', cursive;
+    font-size: 4em;
+}
+
+.p-latest-desc{
+    font-family: 'Inconsolata', monospace;
+    font-size: 1em;
+    font-weight: 600;
+}
+.latest-title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5em;
+    font-weight: bold;  
+    text-shadow: 2px -1px #8d0d7ce0;
+
+}
+
+.latest-img{
+    max-width: 250%;
+}
+.label-latest{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.p-latest{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Merriweather', serif;
+}
+ 
+.author{
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.description{
+    font-family: 'Inconsolata', monospace;
+    margin: 2em 0 2em 0;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+
+
+
+.blog-img{
+    margin-top: 2em;
+   width: 50%;
+   height: 50%;
+}
+
+
+/* index */
+
+.staycation-title {
+    color: #FF8C00;
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-size: 4em;
+    margin-top: 0.3em;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 5px -1px 2px #000000c5;
+
+}
+
+.staycation-p{
+    color: #FF8C00;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    font-weight: 700;
+    text-shadow: 2px -1px #8d0d7ce0;
+   margin-bottom: 2em;
+}
+
+.div-intro{
+    text-align: center;  
+    padding: 0px; 
+    
+}
+
+.body-display{
+    background: url('/public/img/dino-reichmuth-pl1mhwMctJc-unsplash.jpg');
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+   background-color:#F8F8FF	;
+}
+
+
+.logo{
+    max-width: 14%;
+    max-height: 14%;
+    margin-bottom: 0px;
+}
+
+
+.publish{
+    color: #F8F8FF;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration:none !important;
+    text-shadow: 1px 2px #e0dd0e;
+    letter-spacing: 2px;
+
+}
+
+.publish:hover{
+    text-shadow: 2.5px 3px #ffdd00c5;
+    text-decoration: none;
+    color: rgb(194, 34, 132);
+    text-decoration:none !important;
+}
+
+/* FOOTER */
+
+footer{
+    
+    text-align: center;
+    background: #d3821293;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #a8327963, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.soc{
+color: #faf9f9;  
+  
+}
+
+.i-hover:hover{
+    color: #eec48a;
+    
+}
+
+.logo-ft{
+    margin-top: 2em;
+   max-width: 40%;
+   max-height: 40%;
+}
+
+ul{
+    list-style: none;
+   line-height: 3;
+   margin-top: 2em;
+}
+
+.about-footer{
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    margin-top: 2em;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+ li a{
+    font-family: 'Merriweather', serif;
+     font-weight: 900;
+    color:#fdf7fc; 
+    text-decoration:none;
+    font-size: 1.1em;
+    font-weight: 900;
+    margin: 1em;
+}
+
+li a:hover{
+    color:#a82ea2c5 ;
+    text-decoration:none;
+}
+
+.card-title{
+    text-shadow: 1px -1px #8d0d7ce0;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.4em;
+
+}
+
+.card-img-top{
+  
+    max-width: 350px;
+    max-height: 360px;
+}
+
+.card-body{
+    font-family: 'Merriweather', serif;
+
+    text-align: center;
+    
+}
+
+.top-b {
+     margin-top:5em; 
+}
+
+/* ADD */
+
+.i-action{
+    position: absolute;
+
+   margin-top:1.8em;
+}
+
+.trash{
+    padding-right: 0px;
+    margin: auto;
+}
+
+
+/* CONTACT */
+.contact-b{
+    
+    background-repeat: no-repeat;
+   background-size:100% 100%;
+    background-image: url(/public/img/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg);
+}
+.contact-form{
+    margin-top: 2em;
+     border: none !important;
+    border: 5px solid #666666;
+    margin-bottom: 0;
+
+}
+.label-contact{
+    color: rgb(0, 0, 0);
+    text-shadow: 1px -1px #8d0d7ce0;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.8em;
+}
+
+.contact-title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5em;
+    font-weight: bold;  
+    text-shadow: 2px -1px #8d0d7ce0;
+}
+
+
+@media screen and (max-width: 768px) {
+.latest-img{
+  max-width: 100%; */
+}
+.p-latest-desc{
+    margin-top: 2em;
+}
+
+}

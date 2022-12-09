@@ -1,0 +1,36 @@
+<%- include('./partials/head'); %>
+<body class="contact-b" >
+ <%- include('./partials/navbar'); %>
+
+ <div class="jumbotron bg-transparent text-center mx-auto">
+
+    <h2 class="contact-title" >Contact Us</h2>
+    <br> <img class="logo" src="/public/img/logo.png" alt="">
+           <br>
+    <br>
+    <div class="contact-form" >
+    <br>
+    <form class="form-group " action="mailto:ccoding0@gmail.com" method="post" enctype="text/plain">
+        
+        <label class="label-contact" for="name">Name</label> <br>
+    <input class="form-control" placeholder="Please enter your name" type="text" name="name"><br><br>
+
+    <label class="label-contact" for="email"> E-mail:</label><br>
+    <input class="form-control " type="email" placeholder="Please enter your email address" name="mail"><br><br>
+
+    <label class="label-contact"  for="Message"> Message:</label><br>
+    
+    <textarea placeholder="Please enter your message "  name="message" id="" class="form-control" cols="30" rows="5" ></textarea>
+    <br><br>
+    <button class="btn btn-danger btn-lg" type="submit" value="Send"> Send </button>
+    </form>
+
+</div>
+</div>
+
+
+<footer>
+  <%- include('./partials/footer'); %>
+</footer>
+</body>
+</html>
